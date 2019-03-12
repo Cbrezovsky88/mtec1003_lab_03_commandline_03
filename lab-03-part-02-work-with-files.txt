@@ -37,7 +37,7 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+foo.txt
 
 ==========
 7. Create another new file using touch.
@@ -46,7 +46,7 @@ $ touch bar.txt
 ----------
 
 
-
+bar.txt    foo.txt
 ==========
 8. List the files in this directory using the flag that gives the most details.
 
@@ -54,13 +54,14 @@ Copy and paste the output below.
 ----------
 
 
-
+ls -l
 ==========
 9. Create a copy of bar.txt called baz.txt and then list the files again.
 
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
+bar.txt    baz.txt    foo.txt
 
 
 
@@ -69,6 +70,7 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+rm -i bar.txt
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
@@ -76,7 +78,8 @@ Write the command that you used to remove the file.  Copy and paste the output o
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
 
-
+mv foo.txt qux.txt
+baz.txt    qux.txt
 
 ==========
 12. Go up one directory so that you're in ~/mtec1003-lab-03.
@@ -91,7 +94,8 @@ Write the command that you used to move the file.  Copy and paste the output of 
 Write out the command that you used and what happened.
 ----------
 
-
+rmdir my_files
+rmdir: my_files: Directory not empty
 
 ==========
 14. Try removing the directory called my_files using rm.
@@ -99,6 +103,9 @@ Write out the command that you used and what happened.
 Write out the command that you used and what happened.
 ----------
 
+----------
+rm my_files
+rm: my_files: is a directory
 
 
 ==========
@@ -108,7 +115,7 @@ Force the removal of the directory and files using the -rf flag
 
 $ rm -rf my_files
 ----------
-
+$ rm -rf my_files
 
 
 ==========
@@ -120,7 +127,7 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
-
+Text popped up about the website.
 
 
 ==========
@@ -134,7 +141,8 @@ Write the command that you used below.  Write the last line of the output below 
 ----------
 
 
-
+head books/other/pg1232.txt
+Title: The Prince
 ==========
 18. Using the same file again!
 
@@ -144,9 +152,8 @@ Use tail on the file to show the contents of the end of the file.
 
 Write the command that you used below.  Write the last line of the output below.
 ----------
-
-
-
+tail  books/other/pg1232.txt
+Title: The Prince
 ==========
 19. Using the same file...
 
@@ -157,7 +164,8 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
 
-
+less books/other/pg1232.txt
+q quits out of the reading program
 
 ==========
 20. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
@@ -166,16 +174,16 @@ Write the command that you used below.  Describe what spacebar and q does after 
 ----------
 
 
-
+Something i dont know.
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
 
-
-
+52639
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
-----------
+---------
+5063
 
 
 ==========
