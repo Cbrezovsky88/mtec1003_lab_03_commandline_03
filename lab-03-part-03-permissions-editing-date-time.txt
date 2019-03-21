@@ -17,7 +17,7 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 
 What command did you use, and what was its output?
 ----------
-
+date
 
 
 ==========
@@ -26,14 +26,14 @@ What command did you use, and what was its output?
 What command did you use, and what was its output?
 ----------
 
-
+cal
 
 ==========
 3. Go to your home directory.  Verify that you're in your home directory.
 
 What commands did you use to do this?
 ----------
-
+cd ~ pwd
 
 
 ==========
@@ -42,7 +42,8 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
-
+touch copy_to_back.sh
+ls
 
 ==========
 5. What are the permissions on your copy_to_backup.sh.
@@ -50,7 +51,7 @@ What commands did you use to do this?
 What command did you use to find the permissions?
 ----------
 
-
+ls -l copy_to_backup.sh
 
 ==========
 6. Change the permissions so that this file is executable by the user.  Verify the new permissions.
@@ -58,7 +59,7 @@ What command did you use to find the permissions?
 What commands did you use to do this?  What was the output?
 ----------
 
-
+ chmod u+x copy_to_backup.sh 
 
 ==========
 7. Try executing the file!
@@ -68,15 +69,15 @@ $ ./copy_to_backup.sh
 What command did you use to try to execute the file?  What happens?
 ----------
 
-
-
+./copy_to_backup.sh 
+nothing
 ==========
 8. Open the file with nano
 
 What command did you use to do this?
 ----------
 
-
+nano copy_to_backup.sh
 
 ==========
 9. In your file, write the commands to do the following
@@ -90,20 +91,24 @@ Don't forget the first line of your shell script! It should begin with #!/bin/ba
 Write out the code in your file below...
 ----------
 
-
+#!/bin/bash
+mkdir backup
+cp *.txt backup
+echo "I'm done backing up"
 
 ==========
 10. Create a directory in your home called test
 ----------
 
-
+mkdir test
 
 ==========
 11. Go into that directory and create two empty files... 1.txt and 2.txt
 
 What commands did you use to do this?
 ----------
-
+touch 1.txt
+touch 2.txtte
 
 
 ==========
@@ -112,18 +117,19 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
-
-
+mv copy_to_backup.sh test/
 ==========
 13. Run your script.
 
 What commands did you use to do this?
 ----------
 
-
+./copy_to_backup.txt
 
 ==========
 14. Verify that a backup folder was created in your test directory... with copies of the files present.
 
 What commands did you use to do this?  Show the output.
 ----------
+ent-v314-004:test student$ ls backup
+1.txt	2.txt
